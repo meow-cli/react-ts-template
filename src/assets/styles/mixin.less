@@ -1,0 +1,49 @@
+@import './base/index.less';
+@import 'constants.less';
+
+
+// 滚动条
+.scrollbar(@display: block) {
+  &::-webkit-scrollbar {
+    display: @display;
+    width: 3px;
+    height: 4px;
+  }
+  &::-webkit-scrollbar-thumb {
+    background: rgba(243, 246, 254, 1);
+  }
+  &::-webkit-scrollbar-track {
+    background: rgba(0, 0, 0, 0);
+  }
+}
+
+// 清除浮动
+.clearfix {
+  zoom: 1;
+
+  &::before,
+  &::after {
+    display: table;
+    content: '';
+  }
+
+  &::after {
+    clear: both;
+  }
+}
+
+// 文本多余剪切...
+.text-ellipsis {
+  display: block;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.hover {
+  cursor: pointer;
+
+  &:hover {
+    opacity: 0.8;
+  }
+}
